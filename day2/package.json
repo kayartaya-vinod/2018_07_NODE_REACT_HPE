@@ -1,0 +1,28 @@
+{
+  "name": "day2",
+  "version": "1.0.0",
+  "description": "REST Endpoint using DB and Authentication etc",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kayartaya-vinod"
+  },
+  "keywords": [
+    "rest",
+    "express",
+    "mariadb"
+  ],
+  "author": "Vinod <vinod@vinod.co>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mariadb": "^0.7.0",
+    "mysql": "^2.16.0"
+  }
+}
