@@ -5,7 +5,7 @@ const enableCors = require('./middleware/enable-cors');
 const checkForAccessToken = require('./middleware/check-for-access-token');
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // middlewares
 app.use(express.static(path.join(__dirname, 'www')));
