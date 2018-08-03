@@ -8,3 +8,7 @@ export default {
     name: 'Vinod',
     email: 'vinod@vinod.co'
 }
+
+// ----
+
+// import x, {Person, sayHello as greet} from './vinmodule'

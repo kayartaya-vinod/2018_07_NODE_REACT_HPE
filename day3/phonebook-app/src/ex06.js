@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ContactList from './components/ContactList';
+import App from './components/App';
 
-ReactDOM.render(<ContactList />, 
+ReactDOM.render(<App a="1" />, 
     document.getElementById('root'));

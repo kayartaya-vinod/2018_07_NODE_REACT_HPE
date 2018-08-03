@@ -18,9 +18,9 @@ app.post('/auth/login', jsonBodyParser, require('./controller/login'));
 
 app.get('/api/contacts', require('./controller/get-contacts'));
 app.get('/api/contacts/:id', require('./controller/get-one-contact'));
-app.post('/api/contacts', checkForAccessToken, jsonBodyParser, require('./controller/add-contact'));
+app.post('/api/contacts', jsonBodyParser, require('./controller/add-contact'));
 app.put('/api/contacts/:id', checkForAccessToken, jsonBodyParser, require('./controller/update-contact'));
-app.delete('/api/contacts/:id', checkForAccessToken, require('./controller/delete-contact'));
+app.delete('/api/contacts/:id', require('./controller/delete-contact'));
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
