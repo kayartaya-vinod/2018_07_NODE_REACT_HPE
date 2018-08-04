@@ -1,6 +1,7 @@
 const userService = require('../service/user-service');
 const jwt = require('jsonwebtoken');
-const key = process.env.SECRET_KEY;
+// const key = process.env.SECRET_KEY;
+const key = '5d41402abc4b2a76b9719d911017c592';
 
 module.exports = (req, resp) => {
     let { username, password, role } = req.body;

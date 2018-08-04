@@ -41,20 +41,26 @@ module.exports.getContactById = (id) => {
     });
 };
 
-module.exports.getAll = () => {
-    return new Promise((resolve, reject) => {
-        pool.getConnection()
-            .then(conn => {
-                conn.query('select * from contacts')
-                    .then(data => {
-                        conn.end();
-                        resolve(data);
-                    })
-                    .catch(err => reject(err));
-            })
-            .catch(err => reject(err));
-    });
-};
+module.exports.getAll = async () => {
+    let conn = await pool.getConnection();
+    let result = await conn.query('select * from contacts');
+    await conn.end();
+    return result;
+}
+// module.exports.getAll = () => {
+//     return new Promise((resolve, reject) => {
+//         pool.getConnection()
+//             .then(conn => {
+//                 conn.query('select * from contacts')
+//                     .then(data => {
+//                         conn.end();
+//                         resolve(data);
+//                     })
+//                     .catch(err => reject(err));
+//             })
+//             .catch(err => reject(err));
+//     });
+// };
 
 module.exports.updateContact = (contact) => {
     return new Promise((resolve, reject) => {
